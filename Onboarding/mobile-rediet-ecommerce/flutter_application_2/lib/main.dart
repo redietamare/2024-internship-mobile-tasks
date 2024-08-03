@@ -166,11 +166,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             SizedBox(height: 15,),
-             ProductCard(sampleproduct:Product(image: 'assets/images/shoes_2.jpg',productname: "Derby Leather Shoes",price:"123",type: 'Men\'s shoes',rating: '5.0') ),
+             ProductCard(sampleproduct:Product(image: 'assets/images/shoes_2.jpg',productname: "Derby Leather Shoes",price:"123",type: 'Men\'s shoes',rating: '5.0',description: 'A derby leather shoe is a classic and versatile footwear option characterized by its open lacing system, where the shoelace eyelets are sewn on top of the vamp (the upper part of the shoe). This design feature provides a more relaxed and casual look compared to the closed lacing system of oxford shoes. Derby shoes are typically made of high-quality leather, known for its durability and elegance, making them suitable for both formal and casual occasions. With their timeless style and comfortable fit, derby leather shoes are a staple in any well-rounded wardrobe.') ),
              SizedBox(height: 40,),
-             ProductCard(sampleproduct:Product(image: 'assets/images/shoes_2.jpg',productname: "Boots shoes ",price:"222",type: 'Women\'s shoes',rating: '4.0') ),
+             ProductCard(sampleproduct:Product(image: 'assets/images/shoes_2.jpg',productname: "Boots shoes ",price:"222",type: 'Women\'s shoes',rating: '4.0',description: 'A derby leather shoe is a classic and versatile footwear option characterized by its open lacing system, where the shoelace eyelets are sewn on top of the vamp (the upper part of the shoe). This design feature provides a more relaxed and casual look compared to the closed lacing system of oxford shoes. Derby shoes are typically made of high-quality leather, known for its durability and elegance, making them suitable for both formal and casual occasions. With their timeless style and comfortable fit, derby leather shoes are a staple in any well-rounded wardrobe.') ,),
              SizedBox(height: 40,),
-             ProductCard(sampleproduct:Product(image: 'assets/images/shoes_2.jpg',productname: "Brown shoes",price:"553",type: 'Men\'s shoes',rating: '4.0') ),
+             ProductCard(sampleproduct:Product(image: 'assets/images/shoes_2.jpg',productname: "Brown shoes",price:"553",type: 'Men\'s shoes',rating: '4.0', description: 'A derby leather shoe is a classic and versatile footwear option characterized by its open lacing system, where the shoelace eyelets are sewn on top of the vamp (the upper part of the shoe). This design feature provides a more relaxed and casual look compared to the closed lacing system of oxford shoes. Derby shoes are typically made of high-quality leather, known for its durability and elegance, making them suitable for both formal and casual occasions. With their timeless style and comfortable fit, derby leather shoes are a staple in any well-rounded wardrobe.') ),
             ],
           ),
         ),
@@ -294,8 +294,9 @@ class Product {
   String price;
   String type;
   String rating;
+  String description;
   Product(
-    {required this.image,required this.productname,required this.price,required this.type,required this.rating}
+    {required this.image,required this.productname,required this.price,required this.type,required this.rating,required this.description}
     );
   
 

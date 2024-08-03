@@ -30,126 +30,130 @@ class _Updateproductstate extends State<Updateproduct> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: EdgeInsets.only(left: 20.0, top: 30,right: 20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
+      body: Expanded(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.only(left: 20.0, top: 30,right: 20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                IconButton(
-                  icon: Icon(Icons.arrow_back_ios, color: Color(0xFF3f51f3)),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
-                const SizedBox(width: 70),
-                const Text(
-                  'Update Product',
-                  style: TextStyle(
-                    fontSize: 20,
-                    // fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 20),
-            
-            Container(
-              height: 250,
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(12.0),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 8.0,
-                    offset: Offset(0, 4),
-                  ),
-                ],
-              ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-
+                Row(
                   children: [
-                    GestureDetector(
-                      onTap: _pickImage,
-                      child: Icon(
-                        Icons.image_search_outlined,
-                        color: Colors.grey[600],
-                        size: 50,
+                    IconButton(
+                      icon: Icon(Icons.arrow_back_ios, color: Color(0xFF3f51f3)),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                    const SizedBox(width: 70),
+                    const Text(
+                      'Update Product',
+                      style: TextStyle(
+                        fontSize: 20,
+                        // fontWeight: FontWeight.bold,
                       ),
                     ),
-                  
-                    _image == null
-                        ? Center(
-                              child: Text(
-                                'Upload Image',
-                                style: TextStyle(color: Colors.grey[600]),
-                              ),
-                            )
-                        : Image.file(
-                            _image!,
-                            height: 200,
-                            width: double.infinity,
-                            fit: BoxFit.cover,
-                          ),
                   ],
                 ),
-            
-            ),
-            const SizedBox(height: 10,),
-            const Text('name',
-            style: TextStyle(
-              fontSize: 18,
-            ),),
-            CustomTextInputField(labelText: widget.sampleproduct.productname ,staticText: '',maxLines: 1, flag: false,),
-            const SizedBox(height: 10,),
-            const Text('category',
-            style: TextStyle(
-              fontSize: 18,
-            )),
-            CustomTextInputField(labelText: widget.sampleproduct.type,staticText: '', maxLines: 1,flag: false),
-            const SizedBox(height: 10,),
-            const Text('price',
-            style: TextStyle(
-              fontSize: 18,
-            )),
-            CustomTextInputField( labelText: widget.sampleproduct.price ,staticText: '\$',maxLines: 1,flag: false,),
-            const SizedBox(height: 10,),
-            const Text('description',
-            style: TextStyle(
-              fontSize: 18,
-            )),
-            CustomTextInputField(labelText: '' , staticText: '',maxLines: 4,flag: true,),
-            SizedBox(height: 40,),
-            SizedBox(
-            width: double.infinity, // Full width of the parent
-            child: OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                backgroundColor: Color(0xFF3f51f3), // Button color
-                minimumSize: const Size(double.infinity, 50), // Minimum width and height
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8), // Border radius
+                SizedBox(height: 20),
+                
+                Container(
+                  height: 250,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(12.0),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 8.0,
+                        offset: Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+          
+                      children: [
+                        GestureDetector(
+                          onTap: _pickImage,
+                          child: Icon(
+                            Icons.image_search_outlined,
+                            color: Colors.grey[600],
+                            size: 50,
+                          ),
+                        ),
+                      
+                        _image == null
+                            ? Center(
+                                  child: Text(
+                                    'Upload Image',
+                                    style: TextStyle(color: Colors.grey[600]),
+                                  ),
+                                )
+                            : Image.file(
+                                _image!,
+                                height: 200,
+                                width: double.infinity,
+                                fit: BoxFit.cover,
+                              ),
+                      ],
+                    ),
+                
                 ),
-              ),
-              onPressed: () {
-              
-              },
-              child: const Text(
-                'UPDATE',
+                const SizedBox(height: 10,),
+                const Text('name',
                 style: TextStyle(
-                  color: Colors.white,
+                  fontSize: 18,
+                ),),
+                CustomTextInputField(labelText: widget.sampleproduct.productname ,staticText: '',maxLines: 1, flag: false,),
+                const SizedBox(height: 10,),
+                const Text('category',
+                style: TextStyle(
+                  fontSize: 18,
+                )),
+                CustomTextInputField(labelText: widget.sampleproduct.type,staticText: '', maxLines: 1,flag: false),
+                const SizedBox(height: 10,),
+                const Text('price',
+                style: TextStyle(
+                  fontSize: 18,
+                )),
+                CustomTextInputField( labelText: widget.sampleproduct.price ,staticText: '\$',maxLines: 1,flag: false,),
+                const SizedBox(height: 10,),
+                const Text('description',
+                style: TextStyle(
+                  fontSize: 18,
+                )),
+                CustomTextInputField(labelText: widget.sampleproduct.description , staticText: '',maxLines: 4,flag: true,),
+                SizedBox(height: 40,),
+                SizedBox(
+                width: double.infinity, // Full width of the parent
+                child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    backgroundColor: Color(0xFF3f51f3), // Button color
+                    minimumSize: const Size(double.infinity, 50), // Minimum width and height
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8), // Border radius
+                    ),
+                  ),
+                  onPressed: () {
+                  
+                  },
+                  child: const Text(
+                    'UPDATE',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ),
+              
+              
+          
+            
+          
+              ],
             ),
           ),
-          
-          
-
-  
-
-          ],
         ),
       ),
     );
