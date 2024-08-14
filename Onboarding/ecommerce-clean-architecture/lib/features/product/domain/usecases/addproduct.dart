@@ -7,7 +7,7 @@ class AddProductUsecase{
   AddProductUsecase(this.productrepository);
   final ProductRepository productrepository;
   Future<Either<Failure, void>> add(Productentity newproduct){
-    return productrepository.addproduct(newproduct);
+    return productrepository.addProduct(newproduct);
   }
 }
 

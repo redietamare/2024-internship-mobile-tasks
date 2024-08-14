@@ -2,12 +2,17 @@ import 'package:ecommerce/features/product/domain/repository/product_repository.
 import 'package:mockito/annotations.dart';
 import 'package:http/http.dart' as http;
 
+// import 'dummy_data/dummy.dart';
+
 
 @GenerateMocks(
 [
-  ProductRepository
+  ProductRepository,
+  http.Client,
+  // http.MultipartFile,
 ],
-customMocks: [MockSpec<http.Client>(as:#MockHttpClient)]
+// customMocks: [MockSpec<http.Client>(as:#MockHttpClient)]
 
 )
-void main() {}
+void main() {
+}

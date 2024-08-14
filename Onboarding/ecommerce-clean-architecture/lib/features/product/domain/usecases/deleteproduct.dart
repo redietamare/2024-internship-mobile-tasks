@@ -6,7 +6,7 @@ import '../repository/product_repository.dart';
 class DeleteProductUsecase{
   DeleteProductUsecase(this.productrepository);
   final ProductRepository productrepository;
-  Future<Either<Failure,Productentity>> delete(int id){
-    return productrepository.deleteproduct(id);
+  Future<Either<Failure,bool>> delete(String id){
+    return productrepository.deleteProduct(id);
   }
 }

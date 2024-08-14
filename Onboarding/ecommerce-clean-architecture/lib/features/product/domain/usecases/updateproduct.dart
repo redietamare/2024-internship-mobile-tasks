@@ -6,8 +6,8 @@ import '../repository/product_repository.dart';
 class UpdateProductUsecase{
   UpdateProductUsecase(this.productrepository);
   final ProductRepository productrepository;
-  Future<Either<Failure, Productentity>> update(int id){
-    return productrepository.updateproduct(id);
+  Future<Either<Failure, Productentity>> update(Productentity newproduct){
+    return productrepository.updateProduct(newproduct);
   }
 }
 

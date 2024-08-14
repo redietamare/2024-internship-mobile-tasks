@@ -19,8 +19,13 @@ void main(){
     deleteProductUsecase = DeleteProductUsecase(mockProductRepository);  
   });
 
-    const id = 3;
-    const deletedproductdetail =  Productentity(id: 3, image: 'http/img', name: 'adidas', type: 'men', description: 'description', price: 300);
+    const id = '3';
+    const deletedproductdetail =  Productentity(
+      id: '3',
+       image: 'http/img',
+      name: 'adidas', 
+      description: 'description', 
+      price: 300);
 
    
   test(

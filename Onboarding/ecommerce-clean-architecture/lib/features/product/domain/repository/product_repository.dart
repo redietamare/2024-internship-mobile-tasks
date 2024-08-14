@@ -5,9 +5,9 @@ import '../../../../core/error/failure.dart';
 
 abstract class ProductRepository{
 
- Future<Either<Failure,List<Productentity>>> getallproduct() ;
- Future<Either<Failure,void>> addproduct(Productentity newproduct) ;
- Future<Either<Failure,Productentity>> updateproduct(int id,) ;
- Future<Either<Failure,Productentity>> deleteproduct(int id) ;
- Future<Either<Failure,Productentity>> getproduct(int id) ;
+ Future<Either<Failure,List<Productentity>>> getAllProducts() ;
+ Future<Either<Failure,void>> addProduct(Productentity newproduct) ;
+ Future<Either<Failure,Productentity>> updateProduct(Productentity newproduct) ;
+ Future<Either<Failure,bool>> deleteProduct(String id) ;
+ Future<Either<Failure,Productentity>> getProduct(String id) ;
 }

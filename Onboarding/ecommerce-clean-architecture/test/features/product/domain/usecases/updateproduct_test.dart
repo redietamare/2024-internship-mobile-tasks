@@ -18,8 +18,9 @@ void main(){
     updateProductUsecase = UpdateProductUsecase(mockProductRepository);  
   });
 
-    const id = 3;
-    const testproductdetail =  Productentity(id: 3, image: 'http/img', name: 'adidas', type: 'men', description: 'description', price: 300);
+    const id = '3';
+    const testproductdetail =  Productentity(id: '3', image: 'http/img', name: 'adidas',  description: 'description', price: 300);
+    const updatedproduct = Productentity(id: '3', image: 'http/ig', name: 'addas', description: 'desciption', price: 300);
 
    
   test(
@@ -28,11 +29,11 @@ void main(){
   
    () async {
       when(
-        mockProductRepository.updateproduct(id)
+        mockProductRepository.updateproduct(updatedproduct)
 
       ).thenAnswer((_) async=>  Right(testproductdetail));
 
-      final result = await updateProductUsecase.update(id);
+      final result = await updateProductUsecase.update(updatedproduct);
 
     expect(result, Right(testproductdetail));
   });
@@ -42,11 +43,11 @@ void main(){
   () async {
     //arrange
     when(
-      mockProductRepository.updateproduct(id)
+      mockProductRepository.updateproduct(updatedproduct)
     ).thenAnswer((_) async =>  Left(failure));
 
     //act
-    final result = await updateProductUsecase.update(id);
+    final result = await updateProductUsecase.update(updatedproduct);
 
     //assert
     expect(result, Left(failure));

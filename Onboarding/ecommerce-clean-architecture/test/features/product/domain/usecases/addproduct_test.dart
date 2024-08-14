@@ -17,7 +17,7 @@ void main(){
     addProductUsecase = AddProductUsecase(mockProductRepository);  
   });
 
-    const newproductdetail = Productentity(id:12 ,name: 'Nike', type: 'Shoe', description: 'A great Shoe', image: 'The Nike', price: 99.0);
+    const newproductdetail = Productentity(id:'12' ,name: 'Nike', description: 'A great Shoe', image: 'The Nike', price: 99);
 
 
    

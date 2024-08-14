@@ -19,8 +19,8 @@ void main(){
   });
 
     List<Productentity> products = [
-   const Productentity(id:12 ,name: 'Nike', type: 'Shoe', description: 'A great Shoe', image: 'The Nike', price: 99.0),
-   const Productentity(id : 1 ,name: 'Puma', type: 'Shoe', description: 'The best Shoe', image: 'The Puma', price: 999.0),
+   const Productentity(id: '12' ,name: 'Nike',description: 'A great Shoe', image: 'The Nike', price: 99),
+   const Productentity(id : '23' ,name: 'Puma',  description: 'The best Shoe', image: 'The Puma', price: 999),
   ];
 
    

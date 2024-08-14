@@ -19,8 +19,8 @@ void main(){
 
   });
 
-  const testproductdetail =  Productentity(id: 3, image: 'http/img', name: 'adidas', type: 'men', description: 'description', price: 300);
-  const id = 4;
+  const testproductdetail =  Productentity(id: '4', image: 'http/img', name: 'adidas', description: 'description', price: 300);
+  const id = '4';
    
   test(
     'should get a specific product from the repository',

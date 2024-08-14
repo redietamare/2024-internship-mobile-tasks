@@ -106,11 +106,11 @@ class MockProductRepository extends _i1.Mock implements _i4.ProductRepository {
 
   @override
   _i5.Future<_i2.Either<_i6.Failure, _i7.Productentity>> updateproduct(
-          int? id) =>
+          _i7.Productentity? newproduct) =>
       (super.noSuchMethod(
         Invocation.method(
           #updateproduct,
-          [id],
+          [newproduct],
         ),
         returnValue:
             _i5.Future<_i2.Either<_i6.Failure, _i7.Productentity>>.value(
@@ -118,14 +118,14 @@ class MockProductRepository extends _i1.Mock implements _i4.ProductRepository {
           this,
           Invocation.method(
             #updateproduct,
-            [id],
+            [newproduct],
           ),
         )),
       ) as _i5.Future<_i2.Either<_i6.Failure, _i7.Productentity>>);
 
   @override
   _i5.Future<_i2.Either<_i6.Failure, _i7.Productentity>> deleteproduct(
-          int? id) =>
+          String? id) =>
       (super.noSuchMethod(
         Invocation.method(
           #deleteproduct,
@@ -143,7 +143,8 @@ class MockProductRepository extends _i1.Mock implements _i4.ProductRepository {
       ) as _i5.Future<_i2.Either<_i6.Failure, _i7.Productentity>>);
 
   @override
-  _i5.Future<_i2.Either<_i6.Failure, _i7.Productentity>> getproduct(int? id) =>
+  _i5.Future<_i2.Either<_i6.Failure, _i7.Productentity>> getproduct(
+          String? id) =>
       (super.noSuchMethod(
         Invocation.method(
           #getproduct,
@@ -164,8 +165,8 @@ class MockProductRepository extends _i1.Mock implements _i4.ProductRepository {
 /// A class which mocks [Client].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockHttpClient extends _i1.Mock implements _i3.Client {
-  MockHttpClient() {
+class MockClient extends _i1.Mock implements _i3.Client {
+  MockClient() {
     _i1.throwOnMissingStub(this);
   }
 
