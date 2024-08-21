@@ -6,7 +6,7 @@ const ProductModel({
   required  String image,
   required String name,
   required String description,
-  required int price,}
+  required double price,}
 ) : super(
   id: id, 
   image: image,
@@ -22,7 +22,7 @@ const ProductModel({
       image: json['imageUrl'],
       name: json['name'],
       description: json['description'],
-      price: json['price'],        
+      price:( json['price'] as num?)?.toDouble() ?? 45.0,        
    );
 
 }
